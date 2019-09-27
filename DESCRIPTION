@@ -1,0 +1,15 @@
+Package: SISAL.AM
+Title: SISAL age modelling
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Carla",
+           family = "Roesch",
+           role = c("aut", "cre"),
+           email = "carla.roesch@iup.uni-heidelberg.de")
+Description: Age modelling of individual records from the SISAL data base.
+License: gpl
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.99.9000
+RdMacros: Rdpack
+Imports: plyr, tidyverse, rbacon, Bchron, clam, tidyr, tibble, Hmisc, plotrix, rlist, Rdpack
