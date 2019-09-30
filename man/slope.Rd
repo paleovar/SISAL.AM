@@ -20,7 +20,5 @@ Percentage of failed fits.
 Determines slope of three adjacent dates to determine reverslas/outliers
 }
 \references{
-\insertRef{scholz2011stalage}{SISAL.AM}
-
-\insertRef{R}{bibtex}
+Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 }

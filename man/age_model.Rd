@@ -20,7 +20,5 @@ Contact: Denis Scholz, Institute for Geosciences, University of Mainz, Becherweg
 Email: scholzd@uni-mainz.de
 }
 \references{
-\insertRef{scholz2011stalage}{SISAL.AM}
-
-\insertRef{R}{bibtex}
+Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 }

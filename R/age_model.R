@@ -4,6 +4,8 @@
 #' @param file_name name of the entity_id.
 #' @param N Number of iterations.
 #' @return Saves MC ensembel, lin_reg_chronology and AM plot.
+#'
+#' @references Telford, R. J. et al., Quaternary Science Reviews 23, 1-5 (2004)
 runLinReg <- function(working_directory, file_name, N = 2000){
 
   print('---------------- Read in data -------------')
@@ -61,6 +63,8 @@ runLinReg <- function(working_directory, file_name, N = 2000){
 #' @param file_name name of the entity_id.
 #' @param N Number of iterations.
 #' @return Saves MC ensembel, lin_interp_chronology and AM plot.
+#'
+#' @references Telford, R. J. et al., Quaternary Science Reviews 23, 1-5 (2004)
 runLinInterp <- function(working_directory, file_name, N = 2000){
 
   print('---------------- Read in data -------------')
@@ -127,6 +131,9 @@ runLinInterp <- function(working_directory, file_name, N = 2000){
 #' @param file_name name of the entity_id.
 #' @param N Number of iterations.
 #' @return Saves MC ensembel, bacon_chronology and AM plot.
+#'
+#' @references Blauuw, M. et al., Bayesian Analysis 6, 457-474 (2011)
+#' Blauuw, M. et al., rbacon (2019), R package version 2.3.9.1
 runBacon <- function(working_directory, file_name, postbomb = 0, cc = 0 ){
   setwd(file.path(working_directory, file_name, '/Bacon_runs/', file_name))
   depth_eval <- matrix(read.table(paste(file_name,'_depths.txt', sep = ''), col.names = ''))[[1]]
@@ -203,6 +210,9 @@ runBacon <- function(working_directory, file_name, postbomb = 0, cc = 0 ){
 #' @param file_name name of the entity_id.
 #' @param N Number of iterations.
 #' @return Saves MC ensembel, bchron_chronology and AM plot.
+#'
+#' @references Haslett, J. and Parnell, A., Journal of the Royal Statistical Society: Series C (Applied Statistics) 57, 399–418 (2008)
+#' Panell, A. Bchron (2018), R package version 4.3.0
 runBchron <- function(working_directory,file_name){ # sample ids missing
   setwd(file.path(working_directory, file_name, '/Bchron'))
   dating_tb <- read.csv('ages.csv', header = T, stringsAsFactors = F)
@@ -275,6 +285,8 @@ runBchron <- function(working_directory,file_name){ # sample ids missing
 #' @param file_name name of the entity_id.
 #' @param N Number of iterations.
 #' @return Saves MC ensembel, StalAge_chronology and AM plot.
+#'
+#' @references Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 runStalAge <- function(working_directory, file_name){
 
   #Einlesen der Daten

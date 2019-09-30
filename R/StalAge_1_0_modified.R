@@ -9,10 +9,7 @@
 #' @param Daten_orig
 #' @return Returns the median age and 2.5 \% and 97.5 \% quantiles.
 #'
-#' @references
-#' \insertRef{scholz2011stalage}{SISAL.AM}
-#'
-#' \insertRef{R}{bibtex}
+#' @references Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 age_model<-function(Daten, x_raw, Daten_orig) {
 
 library(Hmisc)
@@ -390,12 +387,7 @@ return(results)
 #' @param age Dates
 #' @param error Age uncertainties for each date
 #' @return Modified dating file.
-#' @references
-#' \insertRef{scholz2011stalage}{SISAL.AM}
-#'
-#' \insertRef{R}{bibtex}
-#'
-#' @importFrom Rdpack reprompt
+#' @references Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 
 scan<-function(depth, age, error) {
 
@@ -569,10 +561,7 @@ return(Daten)
 #' @inheritParams scan
 #' @return Percentage of failed fits.
 #'
-#' @references
-#' \insertRef{scholz2011stalage}{SISAL.AM}
-#'
-#' \insertRef{R}{bibtex}
+#' @references Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 slope<-function(depth, age, error) {
 
 iter<-200

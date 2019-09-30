@@ -19,3 +19,7 @@ Saves MC ensembel, bacon_chronology and AM plot.
 \description{
 Age model function for Bacon.
 }
+\references{
+Blauuw, M. et al., Bayesian Analysis 6, 457-474 (2011)
+Blauuw, M. et al., rbacon (2019), R package version 2.3.9.1
+}

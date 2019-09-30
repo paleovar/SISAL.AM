@@ -19,3 +19,7 @@ Saves MC ensembel, bchron_chronology and AM plot.
 \description{
 Age model function for Bchron.
 }
+\references{
+Haslett, J. and Parnell, A., Journal of the Royal Statistical Society: Series C (Applied Statistics) 57, 399–418 (2008)
+Panell, A. Bchron (2018), R package version 4.3.0
+}

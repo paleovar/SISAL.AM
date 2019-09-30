@@ -3,6 +3,7 @@
 import(Bchron)
 import(Hmisc)
 import(clam)
+import(ggplot2)
 import(plotrix)
 import(rbacon)
 import(rlist)

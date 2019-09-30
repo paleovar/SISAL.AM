@@ -20,7 +20,5 @@ Modified dating file.
 Broadly scan dating file for reversals/outliers and increase error.
 }
 \references{
-\insertRef{scholz2011stalage}{SISAL.AM}
-
-\insertRef{R}{bibtex}
+Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 }

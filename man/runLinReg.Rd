@@ -19,3 +19,6 @@ Saves MC ensembel, lin_reg_chronology and AM plot.
 \description{
 Age model function for linear regression.
 }
+\references{
+Telford, R. J. et al., Quaternary Science Reviews 23, 1-5 (2004)
+}

@@ -19,3 +19,6 @@ Saves MC ensembel, lin_interp_chronology and AM plot.
 \description{
 Age model function for linear interpolation.
 }
+\references{
+Telford, R. J. et al., Quaternary Science Reviews 23, 1-5 (2004)
+}

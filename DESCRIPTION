@@ -13,3 +13,7 @@ LazyData: true
 RoxygenNote: 6.1.99.9000
 RdMacros: Rdpack
 Imports: plyr, tidyverse, rbacon, Bchron, clam, tidyr, tibble, Hmisc, plotrix, rlist, Rdpack
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

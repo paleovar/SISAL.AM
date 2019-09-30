@@ -9,6 +9,8 @@
 #' @import Hmisc
 #' @import plotrix
 #' @import rlist
+#' @import ggplot2
+#' @importFrom Rdpack reprompt
 NULL
 
 
@@ -851,10 +853,7 @@ plot_IQR <- function(iqr,depths,used, cex_legend, color_iqr, file_name) {
 #' @param dating_tb Table containing dates, errors and depths.
 #' @return Modified dating file.
 #'
-#' @references
-#' \insertRef{scholz2011stalage}{SISAL.AM}
-#'
-#' \insertRef{R}{bibtex}
+#' @references Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 scan_lin_interp<-function(dating_tb) {
 
   library(Hmisc)
@@ -985,10 +984,7 @@ scan_lin_interp<-function(dating_tb) {
 #' @param dating_tb Table containing dates, errors and depths.
 #' @return Modified dating file.
 #'
-#' @references
-#' \insertRef{scholz2011stalage}{SISAL.AM}
-#'
-#' \insertRef{R}{bibtex}
+#' @references Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
 scan_fine_lin_interp<-function(dating_tb){
 
   #attach(Daten)

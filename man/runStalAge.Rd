@@ -19,3 +19,6 @@ Saves MC ensembel, StalAge_chronology and AM plot.
 \description{
 Age model function for StalAge
 }
+\references{
+Scholz, D. and Hoffmann, D. L., Quaternary Geochronology 6, 369-382 (2011)
+}
