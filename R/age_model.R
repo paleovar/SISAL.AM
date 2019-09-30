@@ -402,7 +402,7 @@ AM_SISAL <- function(prefix, run, file_path = file.path(getwd(),"SISAL_Age_Model
 #' @inheritParams write_files
 #' @return Executes the specified age models, marks in a sepearte file the successfully and failed age models, writes an error file and plots the summary.
 run_SISAL_chrono <- function(runFile, entid, working_directory, bacon, bchron, stalage, linInterp, linReg,j.) {
-  file_name <- write_files(entid, bacon, bchron, stalage, linInterp, linReg, working_directory)
+  file_name <- write_files(entid, bacon, bchron, stalage, linInterp, linReg, working_directory = working_directory)
 
   err <- NULL
   tryCatch({

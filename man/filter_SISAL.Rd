@@ -8,7 +8,7 @@ filter_SISAL(m, dating. = SISAL.AM::dating, sample. = SISAL.AM::sample,
   entity. = SISAL.AM::entity, hiatus. = SISAL.AM::hiatus)
 }
 \arguments{
-\item{m}{Number of class to filter for; m \code{\in} [1,2,3,4]}
+\item{m}{Number of class to filter for; m in[1,2,3,4]}
 }
 \value{
 A vector of all records belonging to the chosen class.

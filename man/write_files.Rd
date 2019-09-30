@@ -5,8 +5,9 @@
 \title{Write age model input data}
 \usage{
 write_files(entid, bacon = F, bchron = F, stalage = F,
-  linInterp = F, linReg = F, working_directory,
-  site. = SISAL.AM::site, entity. = SISAL.AM::entity,
+  linInterp = F, linReg = F, dating. = SISAL.AM::dating,
+  working_directory, site. = SISAL.AM::site,
+  entity. = SISAL.AM::entity,
   entity_link_reference. = SISAL.AM::entity_link_reference,
   reference. = SISAL.AM::reference, notes. = SISAL.AM::notes,
   sample. = SISAL.AM::sample, hiatus. = SISAL.AM::hiatus,

@@ -11,6 +11,12 @@
 #' @import rlist
 #' @import ggplot2
 #' @importFrom Rdpack reprompt
+#' @export filter_SISAL
+#' @export AM_SISAL
+#' @export merge_SISAL_chrono
+#' @export eval
+#' @export plot_sisal_eval
+#'
 NULL
 
 
@@ -21,7 +27,7 @@ NULL
 #' class III: Any record that is not U-series dated \\
 #' class IV: Records that cannot be evaluated, since they have too few or poor inconsistent dates (i.e. non-tractable reversals) \\
 #'
-#' @param m Number of class to filter for; m \code{\in} [1,2,3,4]
+#' @param m Number of class to filter for; m in[1,2,3,4]
 #' @return A vector of all records belonging to the chosen class.
 filter_SISAL <- function(m, dating. = SISAL.AM::dating, sample. = SISAL.AM::sample, entity. = SISAL.AM::entity, hiatus. = SISAL.AM::hiatus){
   dating_tb <- dating. %>% left_join(.,entity., by = "entity_id") %>% filter(entity_status == 'current') %>%
@@ -106,13 +112,14 @@ filter_SISAL <- function(m, dating. = SISAL.AM::dating, sample. = SISAL.AM::samp
 #' @param d18O. SISAL d18O table
 #' @return file_name. The combined entity_id and entity_name. Writes the files modifed and prepared to run the AM.
 #' @example write_files(237, site_tb, dating_tb, sample_tb, bacon = T, '~/Documents/runAM)
-write_files <- function(entid, bacon = F, bchron = F, stalage = F, linInterp = F, linReg = F, working_directory, site. = SISAL.AM::site, entity. = SISAL.AM::entity, entity_link_reference. = SISAL.AM::entity_link_reference, reference. = SISAL.AM::reference, notes. = SISAL.AM::notes,
+write_files <- function(entid, bacon = F, bchron = F, stalage = F, linInterp = F, linReg = F, dating. = SISAL.AM::dating, working_directory, site. = SISAL.AM::site, entity. = SISAL.AM::entity, entity_link_reference. = SISAL.AM::entity_link_reference, reference. = SISAL.AM::reference, notes. = SISAL.AM::notes,
                         sample. = SISAL.AM::sample, hiatus. = SISAL.AM::hiatus, gap. = SISAL.AM::gap, original_chronology. = SISAL.AM::original_chronology, sisal_chronology. = SISAL.AM::sisal_chronology, d13C. = SISAL.AM::d13C, d18O. = SISAL.AM::d18O){
 
   site_tb <- left_join(site., entity., by = 'site_id') %>% left_join(., entity_link_reference., by = 'entity_id') %>%
     left_join(., reference., by = 'ref_id') %>% left_join(., notes., by = 'site_id') %>% mutate_at(vars(site_id, entity_id), as.numeric)
-  dating_tb <- dating. %>% group_by(entity_id) %>%mutate(laminar_dated = if_else((entity_id %in% dating_lamina$entity_id), 'yes', 'no')) %>%
-    mutate_at(vars(dating_id, depth_dating, dating_thickness, X14C_correction, corr_age, corr_age_uncert_pos, corr_age_uncert_neg), as.numeric) %>%ungroup()
+  dating_tb <- dating. %>%
+    mutate_at(vars(dating_id, depth_dating, dating_thickness, X14C_correction, corr_age, corr_age_uncert_pos, corr_age_uncert_neg), as.numeric) %>%
+    group_by(entity_id) %>%mutate(laminar_dated = if_else((entity_id %in% dating_lamina$entity_id), 'yes', 'no')) %>% ungroup()
   sample_tb <- plyr::join_all(list(sample.,hiatus., gap., original_chronology., sisal_chronology., d13C., d18O.), by = 'sample_id', type = 'left', match = 'all') %>%
     mutate_at(vars(entity_id, sample_id, sample_thickness, depth_sample, interp_age, interp_age_uncert_pos, interp_age_uncert_neg, COPRA_age,
                    COPRA_age_uncert_pos, COPRA_age_uncert_neg, linear_age, linear_age_uncert_pos, linear_age_uncert_neg, d13C_measurement,

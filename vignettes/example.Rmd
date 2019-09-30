@@ -9,20 +9,18 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
 library(SISAL.AM)
+library(tidyverse)
 
-wd <- '...' #choose a directory to work in
+wd <- '~/Documents/R Package/' #choose a directory to work in
 
-eId <- filter_SISAL(1) %>%
-  filter(entity_id < 20) # run a selection of records of class 1
+eID <- SISAL.AM::filter_SISAL(1) %>%
+  filter(entity_id < 5) # run a selection of records of class 1
 
 AM_SISAL('',eID, file_path = wd) # run age models and create folder to save them in; creates folder in current working directory
 

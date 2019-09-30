@@ -15,5 +15,6 @@ RdMacros: Rdpack
 Imports: plyr, tidyverse, rbacon, Bchron, clam, tidyr, tibble, Hmisc, plotrix, rlist, Rdpack
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    tidyverse
 VignetteBuilder: knitr

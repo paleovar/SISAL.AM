@@ -18,10 +18,6 @@ merge_SISAL_chrono(runfile, .dating = SISAL.AM::dating,
 }
 \value{
 SISAL chronolgy containg NA for the missing  age models
-#' @example
-m <- merge_sisal_chrono(runFile)
-r <- as.data.frame(m[1])
-s <- as.data.frame(m[2])
 }
 \description{
 Builds the SISAL chronology for successfully executed age models. Supply runFile to method and chronology is build for the included entity ids.
