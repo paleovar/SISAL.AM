@@ -173,8 +173,8 @@ results3[i,3]<-results3[i,1]-quantile(results2[i,,], probs=0.025, na.rm=TRUE, na
 for (i in (1:length(x))) {
 
 results4[i,1]<-median(y[,i], na.rm=TRUE)
-results4[i,2]<-quantile(y[,i], probs=0.975, na.rm=TRUE, names=FALSE)-results4[i,1]
-results4[i,3]<-results4[i,1]-quantile(y[,i], probs=0.025, na.rm=TRUE, names=FALSE)
+results4[i,2]<-quantile(y[,i], probs=0.95, na.rm=TRUE, names=FALSE)-results4[i,1]
+results4[i,3]<-results4[i,1]-quantile(y[,i], probs=0.05, na.rm=TRUE, names=FALSE)
 
 }
 

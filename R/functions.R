@@ -289,7 +289,7 @@ add_hiatus <- function(data, hiatus_tb, stalage = F, bchron =F, linInterp=F) {
 #' @return Table containing the sample depths, median ages and uncertainties.
 #'
 #' @example get_bacon_median_quantile(depth_tb, hiatus_depth, bacon_mcmc, 0.05, 0.95)
-get_bacon_median_quantile <- function(depth_eval, hiatus_tb, bacon_mcmc,q1 = 0.025, q2=0.975) {
+get_bacon_median_quantile <- function(depth_eval, hiatus_tb, bacon_mcmc,q1 = 0.05, q2=0.95) {
   #bacon_mcmc <- sapply(depth_eval, Bacon.Age.d)
   bacon_age <- apply(bacon_mcmc,2,median)
   bacon_quantile <- apply(bacon_mcmc, 2, function(x){quantile(x, probs = c(q1,q2), na.rm = T)})
