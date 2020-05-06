@@ -1,3 +1,6 @@
 
-Generating age models for the SISAL database v1b; ref.: Atsawawaranunt, K. et al and SISAL working group members, ESSD 10,1687-1713, (2018); ComasBru,L. et al and SISAL
-working group members, CLIM PAST 15, 1557-1579, (2019)
+This repository is in supplement to 
+Comas-Bru, L., Rehfeld, K., Roesch, C., Amirnezhad-Mozhdehi, S., Harrison, S. P., Atsawawaranunt, K., Ahmad, S. M., Ait Brahim, Y., Baker, A., Bosomworth, M., Breitenbach, S. F. M., Burstyn, Y., Columbu, A., Deininger, M., Demény, A., Dixon, B., Fohlmeister, J., Hatvani, I. G., Hu, J., Kaushal, N., Kern, Z., Labuhn, I., Lechleitner, F. A., Lorrey, A., Martrat, B., Novello, V. F., Oster, J., Pérez-Mejías, C., Scholz, D., Scroxton, N., Sinha, N., Ward, B. M., Warken, S., Zhang, H., and the SISAL members: SISALv2: A comprehensive speleothem isotope database with multiple age-depth models, Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2020-39, in review, 2020. 
+
+Earlier versions were used to generate age models for the SISAL database v1b; (ref.: Atsawawaranunt, K. et al and SISAL working group members, ESSD 10,1687-1713, (2018); ComasBru,L. et al and SISAL working group members, CLIM PAST 15, 1557-1579, (2019);) for 
+Carla Roesch & Kira Rehfeld. Automatising age-depth modelling for hundreds of speleothems. 9th International Workshop on Climate Informatics, Paris, 2019.  https://www.researchgate.net/publication/336551680_Automatising_age-depth_modelling_for_hundreds_of_speleothems
