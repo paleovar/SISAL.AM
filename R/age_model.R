@@ -36,7 +36,7 @@ runLinReg <- function(working_directory, file_name, N = 2000){
   write.table(as.matrix(lr),'mc_linReg_ensemble.txt', col.names = F, row.names = F)
 
   print('--------------median and quantiles--------------')
-  stats <- get_median_quantiles(lr[,3:N+2], q1 = 0.05, q2 = 0.95)
+  stats <- get_median_quantiles(lr[,3:N+2], q1 = 0.025, q2 = 0.975)
   age_median <- stats[,1]
   age_sd_low <- stats[,2]
   age_sd_high <- stats[,3]
@@ -104,7 +104,7 @@ runLinInterp <- function(working_directory, file_name, N = 2000){
   write.table(as.matrix(li),'mc_linInt_ensemble.txt', col.names = F, row.names = F)
 
   print('--------------median and quantiles--------------')
-  stats <- get_median_quantiles(li[,3:N+2], q1 = 0.05, q2 = 0.95)
+  stats <- get_median_quantiles(li[,3:N+2], q1 = 0.025, q2 = 0.975)
   age_median <- stats[,1]
   age_sd_low <- stats[,2]
   age_sd_high <- stats[,3]
@@ -241,7 +241,7 @@ runBchron <- function(working_directory,file_name){ # sample ids missing
 
   mcmc <- run$thetaPredict
   bchron_age <- apply(mcmc,2,median)
-  bchron_quantile <- apply(mcmc, 2, function(x){quantile(x, probs = c(0.05,0.95), na.rm = T)})
+  bchron_quantile <- apply(mcmc, 2, function(x){quantile(x, probs = c(0.025,0.975), na.rm = T)})
 
   d <- cbind(depth_eval, bchron_age,
              bchron_age_uncert_pos = bchron_quantile[2,]-bchron_age,
